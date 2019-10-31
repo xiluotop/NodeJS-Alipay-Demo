@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.content {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            table-layout: fixed;
+            word-break: break-all;
+        }
+
+        .content tr {
+            width: 50px;
+        }
+
+        .count {
+            width: 50px;
+        }
+
+        #submit {
+            width: 200px;
+            height: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    用户名：<input type="text" id="username">
+    <div class="content">
+        <table border="1" width="500">
+            <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>商品单价</th>
+                    <th>购买数量</th>
+                    <th>总价</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="goods" id="goods">
+                            <option value="1">大卫龙</option>
+                            <option value="2">可乐</option>
+                            <option value="3">雪碧</option>
+                            <option value="4">QQB</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span id="price">3</span>￥
+                    </td>
+                    <td>
+                        <input type="text" name="count" class="count" checked value="1">
+                    </td>
+                    <td>
+                        <span id='total'>10</span>￥
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="buy">购&ensp;&ensp;买</button>
+        <button id="searchOrder">查看所有订单</button>
+
+        <table border="1" style="margin-top:20px;" width="100%">
+            <thead>
+                <tr>
+                    <th>商品订单号</th>
+                    <th>支付宝订单号</th>
+                    <th>商品名称</th>
+                    <th>商品单价</th>
+                    <th>商品个数</th>
+                    <th>商品总价</th>
+                    <th>支付状态</th>
+                    <th>购买人</th>
+                </tr>
+            </thead>
+            <tbody id="order_list">
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
